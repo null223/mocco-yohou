@@ -54,12 +54,13 @@ h2 span {
   border-radius: 50%;
   box-shadow: 10px 10px 30px rgba(0,0,0,0.2);
   transform: translateZ(0);
+  pointer-events: none;
 }
 
 #root {
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 30px;
+  bottom: 30px;
   z-index: 100;
   left: 0;
   right: 0;
@@ -74,4 +75,5 @@ h2 span {
 
 .App {
   position: relative;
+  height: 100%;
 }
