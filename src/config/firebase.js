@@ -1,5 +1,5 @@
 import firebase from 'firebase/app';
-// import 'firebase/firestore'; //firestoreを使う場合
+import 'firebase/firestore'; //firestoreを使う場合
 import 'firebase/auth';
 import * as firebaseui from 'firebaseui';
 
@@ -19,5 +19,5 @@ export const ui = new firebaseui.auth.AuthUI(firebase.auth());
 // export const providerGoogle = new firebase.auth.GoogleAuthProvider();
 // export const providerFacebook = new firebase.auth.FacebookAuthProvider();
 export const providerTwitter = new firebase.auth.TwitterAuthProvider();
-// export const db = firebase.firestore(); //firestoreを使う場合
+export const db = firebase.firestore(); //firestoreを使う場合
 export default firebase;
