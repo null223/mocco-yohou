@@ -71,6 +71,7 @@ h2 span {
   margin: auto;
   max-width: calc(100% - 20px);
   padding: 10px;
+  overflow-y: hidden;
 }
 
 .App {

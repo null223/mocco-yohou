@@ -1,15 +1,14 @@
 import { useState } from 'react'
 
-import BoardTop from './BoardTop'
-import BoardBottom from './BoardBottom'
+import BoardTop from '../containers/BoardTop'
+import BoardBottom from '../containers/BoardBottom'
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default ({user, isFocus, logoutUser}) => {
-  const [appHeight, setAppHeight] = useState(200);
+  const [appHeight, setAppHeight] = useState(200)
   const resizeCheck = () => {
-    const wrap_dom =  document.getElementById('app');
-    console.log(wrap_dom.clientHeight);
-    setAppHeight(wrap_dom.clientHeight);
+    const wrap_dom =  document.getElementById('app')
+    setAppHeight(wrap_dom.clientHeight)
   }
   window.addEventListener('resize', resizeCheck)
   window.addEventListener('load', resizeCheck)
@@ -17,7 +16,7 @@ export default ({user, isFocus, logoutUser}) => {
   return (
     <>
       <BoardTop appHeight={appHeight} />
-      <BoardBottom appHeight={appHeight} logoutUser={logoutUser} />
+      <BoardBottom appHeight={appHeight} />
     </>
   )
 }

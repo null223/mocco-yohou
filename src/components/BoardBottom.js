@@ -2,15 +2,20 @@ import styled, { css } from 'styled-components'
 import { Button } from '@material-ui/core'
 
 // eslint-disable-next-line import/no-anonymous-default-export
-export default ({ logoutUser }) => {
+export default ({ isFocus, logoutUser, setFocus }) => {
   return (
-    <StWrapper style={{height: 120}}>
+    <StWrapper style={{height: 120 + (isFocus ? 40 : 0)}}>
       <div>
         <Button
           color="primary"
           variant="contained"
           onClick={logoutUser}
         >ログアウト</Button>
+        <Button
+          color="primary"
+          variant="contained"
+          onClick={() => setFocus(true)}
+        >フォーカス</Button>
       </div>
     </StWrapper>
   )
